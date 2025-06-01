@@ -1,5 +1,5 @@
 # Spring AI Angular - Chat Clone
-This project was developed with Java Spring AI and Angular, following demostration by Loiana Groner.
+This project was developed with Java Spring AI and Angular, following demostration by Loiane Groner.
 
 # Tecnologies
 - Java 24
