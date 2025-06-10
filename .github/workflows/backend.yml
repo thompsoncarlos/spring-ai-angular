@@ -1,0 +1,28 @@
+name: Build Spring Boot and Deploy to Render
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - "api-ai/**"
+      - ".github/workflows/backend.yml"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: api-ai
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up JDK 24
+        uses: actions/setup-java@v3
+        with:
+          java-version: "24"
+          distribution: "temurin"
+      - name: Build with Maven
+        run: ./mvnw clean package -DskipTests
+      # Adicione um passo manual para deploy no Render
+      - name: Deploy to Render
+        run: echo "Configure o deploy automático no painel do Render.com após o build."
