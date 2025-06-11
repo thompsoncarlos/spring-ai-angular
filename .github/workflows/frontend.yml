@@ -5,8 +5,8 @@ on:
     branches:
       - master
     paths:
-      - 'angular-ai/**'
-      - '.github/workflows/frontend.yml'
+      - "angular-ai/**"
+      - ".github/workflows/frontend.yml"
 
 jobs:
   build-and-deploy:
@@ -19,7 +19,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18'
+          node-version: "18"
       - name: Install dependencies
         run: npm install
       - name: Build
@@ -28,4 +28,4 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
-          folder: dist
+          folder: dist/angular-ai
